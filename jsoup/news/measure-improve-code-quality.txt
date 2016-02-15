@@ -1,0 +1,54 @@
+Measure and Improve Code Quality
+
+At the Agile Practitioners 2016 conference Boris Modylevsky will give a talk about measuring and improving code quality.
+
+InfoQ interviewed him about the importance of measuring code quality and how measurements can be used to improve quality, integrating static code analysis in continuous integration, testing coverage and test automation, and the benefits that continuous integration with integrated code analysis and test coverage can bring.
+
+InfoQ: Can you elaborate about the importance of measuring code quality?
+
+Modylevsky: As software developers we can say many things about our software product. Whether it works for specific scenarios, whether it performs well under some limitations, whether it will recover from disaster. All these questions do not answer the question on how good or bad our code is. There are many definitions of code quality, but usually people refer to "quality code" as code that is flexible, testable and readable. If we can assess how good our code is, we can estimate the effort for the next tasks more precisely or allocate time for reducing the technical debt in order to improve code quality. So by measuring the internal code quality we improve its external quality and as a result improve the software product.
+
+InfoQ: Do you have examples of how you have measured code quality and used that to improve the quality?
+
+Modylevsky: I was working on a project which had a mix of legacy code and new code. The legacy code required refactoring and wasn’t unit tested, while the new code was written from ground up and was well designed, clean and tested. The problem was that the new code was mixed with the the legacy code and it was not easy to identify which code areas need to be improved. When we started measuring code quality, it became clear and obvious which parts of the code need to be improved. Measuring code quality helped us to assess the technical dept and we were able to allocate resources to its refactoring.
+
+InfoQ: How did you integrate static code analysis in your continuous integration process and tools?
+
+Modylevsky: There are many tools on the shelf for static code analysis and it is important to choose the tool that best fits your needs. Currently I am working on an orchestration solution that integrates between QualiSystems CloudShell and VMWare VCenter. The project is written in Python and hosted on a public repository on Github. The project is available at the following link: https://github.com/QualiSystems/vCenterShell.
+
+For this specific project I was looking for tools that are provided as-a-service with minimal configuration and have good integration with Github. For static code analysis I chose Code Climate, which immediately spotted on some duplicate code and potential bugs. Needless to say that its configuration was completely seamless and it’s free for public repositories.
+
+InfoQ: How about testing coverage and test automation: Can you share your experiences with this?
+
+Modylevsky: Code coverage is usually effective when it is applied on unit tests. It allows to identify edge cases that aren’t tested or spot large areas of code that are less covered. When it comes to test automation, i.e. end-to-end testing it gives less value if at all. High code coverage on test automation would not necessarily indicate that all the edge cases are well tested.
+
+InfoQ: Which benefits are you getting from continuous integration with integrated code analysis and test coverage?
+
+Modylevsky: Measuring code analysis and code coverage during continuous integration gives a lot of value. First of all, it shows the trends over time of each of the metrics. Secondly, it allows to fail a build if some metric reduce relatively to the previous build. For example, using good integration between Github and Coveralls.io it is possible to configure code coverage as a required check for merging a Pull Request. In this way you can ensure continuous improvement and prevent degrading the code over time.
+
+InfoQ: If people are looking for ways to improve the quality of their products, can you give them some advice?
+
+Modylevsky: Present these tools to your development team as sort of a game when increasing these metrics gains you more scores. Measure the scores and allow developers to compete between them. Make a dashboard displaying the top scorers and show it on a big screen in your company.
+
+Let people to be proud of their code!
+
+Related Editorial
+
+Related Vendor Content
+
+Related Sponsor
+
+ 
+
+The Secrets of Agile Estimation Three Ingredients for Great Software Releases
+
+Allowed html: a,b,br,blockquote,i,li,pre,u,ul,p
+
+
+
+
+
+
+
+
+
