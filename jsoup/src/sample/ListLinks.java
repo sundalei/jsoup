@@ -14,6 +14,7 @@ public class ListLinks {
 		Validate.isTrue(args.length == 1, "usage: supply url to fetch");
 		String url = args[0];
 		print("Fetching %s...", url);
+		System.out.println("hello");
 		
 		Document doc = Jsoup.connect(url).get();
         Elements links = doc.select("a[href]");
