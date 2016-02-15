@@ -11,6 +11,7 @@ public class Sample1 {
 			NetWorkSetter.setNetwork();
 			Document doc = Jsoup.connect("http://www.infoq.com/news/").get();
 			System.out.println(doc);
+			System.out.println("hello");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
