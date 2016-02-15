@@ -15,6 +15,7 @@ public class ListLinks {
 		String url = args[0];
 		print("Fetching %s...", url);
 		System.out.println("hello");
+		System.out.println("test git is slow.");
 		
 		Document doc = Jsoup.connect(url).get();
         Elements links = doc.select("a[href]");
