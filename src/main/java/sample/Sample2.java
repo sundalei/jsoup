@@ -4,7 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.safety.Cleaner;
-import org.jsoup.safety.Whitelist;
+import org.jsoup.safety.Safelist;
 
 public class Sample2 {
 	public static void main(String[] args) {
@@ -22,8 +22,7 @@ public class Sample2 {
 		span.wrap("<li><a href='http://example.com/'></a></li>");
 		
 		String unsafe = "<p><a href='http://example.com/' onclick='stealCookies()'>Link</a></p>";
-		String safe = Jsoup.clean(unsafe, Whitelist.basic());
-		Cleaner cleaner = new Cleaner(Whitelist.basic());
+		Cleaner cleaner = new Cleaner(Safelist.basic());
 		cleaner.clean(doc);
 		System.out.println(doc);
 	}

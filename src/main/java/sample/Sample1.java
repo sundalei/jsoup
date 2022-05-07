@@ -8,10 +8,8 @@ import org.jsoup.nodes.Document;
 public class Sample1 {
 	public static void main(String[] args) {
 		try {
-			NetWorkSetter.setNetwork();
 			Document doc = Jsoup.connect("http://www.infoq.com/news/").get();
 			System.out.println(doc);
-			System.out.println("hello");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
